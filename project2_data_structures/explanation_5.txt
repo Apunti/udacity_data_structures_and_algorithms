@@ -1,0 +1,29 @@
+To link the Blocks I created the Blockchain and Node class.
+The Node class has as a value a Block class and points towards
+the previous node. The Blockchain class acts like a LinkedList
+and keeps track of both the head and the tail, so it's really
+fast to add or remove elements from the end or the front of the
+list, O(1).
+
+Algorithm:
+
+The idea is to create a LinkedList where its nodes keep track of the
+previous node. Each node has its value, which is a Block object, and
+stores the previous node.
+
+Time complexity:
+
+The time complexity of the print_chain method is O(n), where n is the
+number of blocks, and the time complexity of add_node is O(1), because
+of the data structure used.
+
+Space complexity:
+
+The space complexity is O(n), where n is the number of blocks, but the
+auxiliar space is O(1).
+
+Data structure:
+
+I implemented a LinkedList keeping track off the head and tail node,
+this makes possible to insert and delete at the top and bottom of the
+list in constant time, O(1).

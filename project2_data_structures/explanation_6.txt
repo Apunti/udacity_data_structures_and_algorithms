@@ -1,0 +1,40 @@
+Union method
+------------------------------------------------------------------------
+Algorithm:
+
+For the union method, we go through the first list, and at every value,
+we go through the second list and we make sure that every element on
+both lists are added only once.
+
+Time complexity:
+
+As for every item in list1, we go through all the list2, the time is
+quadratic, O(n*m).
+
+Space complexity:
+
+The space complexity O(n*m) and the auxiliary space is at worst case O(n*m). We create a
+list to keep track of the items that have already been selected.
+
+
+Intersection method
+------------------------------------------------------------------------
+Algorithm:
+
+For the intersection method, we also create an auxiliary list, that keeps
+track of the values added because they can't be added twice. Therefore,
+the time is still O(n*m) and the space efficiency is O(n*m).
+
+Time complexity:
+
+As for every item in list1, we go through all the list2, the time is
+quadratic, O(n*m).
+
+Space complexity:
+
+The space complexity is O(n*m) and the auxiliary space is at worst case O(n),
+assuming that n < m. We create a list to keep track of the items that have
+already been selected.
+
+
+Where n, m stands for the lenghts of list1 and list2 respectively.

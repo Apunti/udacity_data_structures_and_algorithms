@@ -1,0 +1,14 @@
+I created a class named Huffman_Coding that handles all the operations
+needed to encode and decode a text. Given a text, it first creates a
+dictionary with all the characters and their frequency. This is used to
+create a priority queue. This priority queue will be used to create a
+tree to build the codes for the different characters. Once we have the
+codes, we create to dictionaries, one to encode and the other to decoded
+and we are good to go.
+
+The add_node method of the queue is O(n), where n is the number of elements
+in the queue. It could be logarithmic, but I
+considered that as it has to be done only once, it wouldn't do a big
+difference. Moreover, I thought the scope of this problem was another.
+To create the dictionaries and the tree is O(n) too because we go once
+at each character.

@@ -1,0 +1,23 @@
+I used a recursive function to solve this problem
+
+Algorithm:
+
+I created and auxiliary function to keep track of the list of different
+files. We look for every path if it's a directory or a file. If it's a
+file, we check if it has the suffix, if it does, we added to the list.
+If it's a directory, we enter to the directory and we recursively do the
+same.
+
+Time complexity:
+
+The time complexity of the algorithm is O(n), where n is the number of possible
+paths, because we have to go through all directories and the built-in x in s has
+an average complexity of O(1). So, at every iteration, we have to go through all
+the subdirectories and check all the files. For example, if the algorithm is
+called k times, and every directory has m different paths, it will be O(m*k)
+
+
+Space complexity:
+
+The space complexity is, at worst case scenario, O(n), depending on the
+number of files, where n is the number of possible paths.

@@ -1,0 +1,9 @@
+I used an OrderedDict as a cache, so the dictionary can keep track of the order
+at which the keys have been added to the dictionary. When the get method is called,
+we fiirst check if the key is in the cache. If not, we return -1, and if we find it,
+we delete and set it again in order of putting it on the most recently used.
+
+All the methods for the dictionary have time complexity O(1), del, popitem, set value ...
+so all the operations are done at constant time O(1).
+
+The space complexity depend is O(n), where n is the capacity of the cache.

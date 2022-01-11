@@ -1,0 +1,18 @@
+Algorithm:
+
+We use recursion to solve this problem. Firstly, if the user is in the
+group, we can return True. If the group has no more groups and the user
+is not in there, we can return False. Else, we look for subgroups inside
+the group and we apply the function again.
+
+Time complexity:
+
+The time complexity is O(n), where n are all the possible subgroups and users
+within a group. We have to go through all the subgroups until we find the user.
+So, for example, if the algorithm runs k times (visits n subgroups), and every
+subgroup has m users + groups, the time will be O(k*m).
+
+Space complexity:
+
+The auxiliary space is O(1), and the space complexity is O(n), the number of
+subgroups in the group class provided.
