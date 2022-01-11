@@ -1,0 +1,69 @@
+ROUTE TREE CLASS methods:
+--------------------------------------------------------------------------------
+insert:
+
+We first set the current_node to the Trie root, and for every character in the
+word, we insert it to the node children dic and changge the current node to its
+child.
+
+The time complexity is O(n), where n is the length of the word, because we
+iterate all the word.
+
+Both the space complexity and the auxiliary space are O(n), because we create a
+dic storing every character of the word as a key.
+
+The data structure used is given by the problem.
+
+find:
+
+We first set the current_node to the Trie root, and for every character in the
+prefix, we look at the current_node children if exists. If it does, we update
+the current_node and we repeat this until we don't find the character in its
+children, or until we have iterated over all the prefix, when we will return the
+last node visited.
+
+The time complexity is linear because we go through all the prefix O(n). To get an
+item from the dictionary the time complexity is O(1).
+
+The auxiliary space in this case is O(1), and the space complexity is O(n).
+--------------------------------------------------------------------------------
+
+ROUTE TRIE NODE  methods:
+--------------------------------------------------------------------------------
+insert:
+
+To insert the char we look if the char is in the children dic. If not, we add an
+entry to the dic with a new TrieNode as a value.
+
+The time and space complexity, as we only insert one character, is O(1). Average
+case for x in s is O(1) too.
+--------------------------------------------------------------------------------
+
+ROUTER methods
+--------------------------------------------------------------------------------
+add_handler:
+
+We use the routeTrie.insert method and the split_path to add a handler. Therefore,
+the time complexity is O(n), and the space complexity is O(n).
+
+lookup:
+
+We set the current_node to the Trie root. We look for the first word in the path
+through the current_node children. If we can't find it, we return the not found
+handler. If we find it, we change the currengt_node and we look for the second
+word, until we reach a node where the word is not in its children or if we found
+all the words in the path. Then we return the Node's handler.
+
+The time complexity is O(n) where n are the number of words in the path. The time
+complexity of x in s is on the average case O(1).
+
+The auxiliary space complexity is O(1) because we don't use any new data structure
+in this method.
+
+split_path:
+
+We use the built-in string method str.split to obtain a list of words from a path.
+
+The time complexity of string.split is O(n), where n are the number of characters
+in the path and the space complexity is O(k), where k are the number
+of words in the path.

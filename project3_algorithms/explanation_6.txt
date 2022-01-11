@@ -1,0 +1,17 @@
+We assume the input list to be a list of integers.
+
+Algorithm:
+
+We iterate the values of the list, storing the max and min value
+that have been seen so far. At the end, we will have the max and
+min values of the list.
+
+Time complexity:
+
+We iterate over the list of n elements, so the time complexity is
+linear, O(n).
+
+Space complexity:
+
+The auxiliary space is O(1) because we only use two variables, but
+the space complexity is O(n), the length of the given list of ints.

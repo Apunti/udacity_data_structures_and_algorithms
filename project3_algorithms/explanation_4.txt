@@ -1,0 +1,24 @@
+Algorithm:
+
+The main idea of the algorithm is to go through the list element by
+element, if 0 is found, put it on the first position, if a 2 is found
+put it at the end of the list, and if 1 is found leave it there. This
+way, we can sort it in a single traversal.
+
+Moreover, we check if all the items in the input_list are either 0,1 or 2.
+
+
+Time complexity:
+
+We go through all the list, element by element, so the time complexity is
+linear, O(n). The method insert and the method delete are also O(n), so
+the algorithm is O(n).
+
+Space complexity:
+
+We use the list provided, so the time complexity is O(n), the auxiliary
+space is O(1).
+
+Data structure:
+
+No data structure choice

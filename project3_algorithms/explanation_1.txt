@@ -1,0 +1,28 @@
+I used recursion to solve this problem.
+
+Algorithm:
+
+The main idea of the algorithm is to consider an interval where the
+solution is included, and to reduce this interval until we find the
+solution. We start with the interval (0,number), where number si the
+number we want to find the sqrt of. Then we compute the mid point of
+the interval and we check if the solution is greater or lower. This way
+we can reduce the interval in half.
+
+Moreover, the program checks if the input is an integer, if not, it
+returns "You must enter a number!" and if the number is positive.
+
+Time efficiency:
+
+As the interval is reduced in half at every iteration, the time complexity
+of the algorithm is O(log n), where n is the length of the interval
+(0,number).
+
+Space efficiency:
+
+The space used by the algorithm is O(1), we don't use ay data structure,
+we just use variables that change their value at every iteration.
+
+Data structure:
+
+No data structure choice

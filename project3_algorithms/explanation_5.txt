@@ -1,0 +1,49 @@
+TRIE CLASS methods:
+--------------------------------------------------------------------------------
+insert:
+
+We first set the current_node to the Trie root, and for every character in the
+word, we insert it to the node children dic and changge the current node to its
+child.
+
+The time complexity is O(n), where n is the length of the word, because we
+iterate all the word.
+
+Both the space complexity and the auxiliary space are O(n), because we create a
+dic storing every character of the word as a key.
+
+The data structure used is given by the problem.
+
+find:
+
+We first set the current_node to the Trie root, and for every character in the
+prefix, we look at the current_node children if exists. If it does, we update
+the current_node and we repeat this until we don't find the character in its
+children, or until we have iterated over all the prefix, when we will return the
+last node visited.
+
+The time complexity is linear because we go through all the prefix O(n). To get an
+item from the dictionary the time complexity is O(1).
+
+The auxiliary space in this case is O(1), and the space complexity is O(n).
+--------------------------------------------------------------------------------
+
+TRIE NODE  methods:
+--------------------------------------------------------------------------------
+insert:
+
+To insert the char we look if the char is in the children dic. If not, we add an
+entry to the dic with a new TrieNode as a value.
+
+The time and space complexity, as we only insert one character, is O(1). Average
+case for x in s is O(1) too.
+
+suffixes:
+
+We use a recursive algorithm to solve this problem. If the node has no more children
+we add the suffix to the list, if it has, we add the character of the node to the
+suffix and we look at all the children of the actual node.
+
+The space complexity is O(n), where n are the number of possible suffixes. The
+time complexity is O(k) where k are the number of nodes beyond the TrieNode because we go
+through all its nodes.

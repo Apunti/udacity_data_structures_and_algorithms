@@ -1,0 +1,38 @@
+To solve this problem, first we sort the input_list, so I created
+insert_element to help me sort the list. Then, to build the number,
+starting with the smallest numbers, we multipy by 10**x, where x depends
+on thee number.
+
+The time complexity of this algorithm is O(n log n), because the sorting
+takes n log n.
+
+The space complexity of this algorithm is O(n), because we sort the list.
+------
+
+We assume the input_list to be a list of integers.
+
+Algorithm:
+
+The main idea of the algorithm is to first sort the list, increasing order,
+and then build the two numbers by placing the lowest ones on the right hand
+side. So, once we have the sorted list, we would take the first two numbers
+to be the units, the next two to be the tens, and so on.
+
+To sort, we create a new list and we use insert_element to insert elements
+in order. Insert_element is a recursive function that by looking at the
+midpoint of the interval, at every iteration we get rid of half of the list.
+
+Time efficiency:
+
+As the interval is reduced in half at every iteration, the time complexity
+of the algorithm is O(log n), where n is the length of the interval
+(0,number).
+
+Space efficiency:
+
+The space used by the algorithm is O(1), we don't use ay data structure,
+we just use variables that change their value at every iteration.
+
+Data structure:
+
+No data structure choice
